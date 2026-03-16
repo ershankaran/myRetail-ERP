@@ -1,0 +1,9 @@
+CREATE DATABASE iam_db;
+CREATE DATABASE inventory_db;
+CREATE DATABASE order_db;
+CREATE DATABASE finance_db;
+CREATE DATABASE hr_db;
+CREATE DATABASE pos_db;
+CREATE DATABASE procurement_db;
+CREATE DATABASE analytics_db;
+CREATE DATABASE notification_db;
