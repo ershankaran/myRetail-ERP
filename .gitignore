@@ -1,0 +1,107 @@
+# ─── JAVA & MAVEN ────────────────────────────────────────────────
+target/
+*.class
+*.jar
+*.war
+*.ear
+*.nar
+!**/src/main/**/target/
+!**/src/test/**/target/
+.mvn/wrapper/maven-wrapper.jar
+release.properties
+dependency-reduced-pom.xml
+buildNumber.properties
+.mvn/timing.properties
+
+# ─── SPRING BOOT ─────────────────────────────────────────────────
+application-local.yml
+application-local.properties
+application-dev.yml
+application-prod.yml
+*.env
+
+# ─── SECRETS — NEVER COMMIT THESE ────────────────────────────────
+**/*secret*
+**/*password*
+**/*credential*
+**/*api-key*
+vault-token
+.vault-token
+
+# ─── INTELLIJ IDEA ───────────────────────────────────────────────
+.idea/
+*.iws
+*.iml
+*.ipr
+out/
+!**/src/main/**/out/
+!**/src/test/**/out/
+
+# ─── ECLIPSE ─────────────────────────────────────────────────────
+.apt_generated
+.classpath
+.factorypath
+.project
+.settings
+.springBeans
+.sts4-cache
+bin/
+!**/src/main/**/bin/
+!**/src/test/**/bin/
+
+# ─── VSCODE ──────────────────────────────────────────────────────
+.vscode/
+*.code-workspace
+
+# ─── NODE / ANGULAR ──────────────────────────────────────────────
+frontend/**/node_modules/
+frontend/**/.angular/
+frontend/**/dist/
+frontend/**/.cache/
+frontend/**/*.js.map
+frontend/**/npm-debug.log*
+frontend/**/yarn-error.log*
+frontend/**/.env.local
+frontend/**/.env.*.local
+
+# ─── DOCKER ──────────────────────────────────────────────────────
+docker-compose.override.yml
+.docker/
+
+# ─── KUBERNETES / HELM ───────────────────────────────────────────
+infra/helm/**/charts/*.tgz
+infra/k8s/secrets/
+kubeconfig
+*.kubeconfig
+
+# ─── OS FILES ────────────────────────────────────────────────────
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+desktop.ini
+
+# ─── LOGS ────────────────────────────────────────────────────────
+*.log
+logs/
+spring.log
+
+# ─── TEST OUTPUTS ────────────────────────────────────────────────
+**/test-results/
+**/surefire-reports/
+**/failsafe-reports/
+coverage/
+*.exec
+
+# ─── KAFKA / ZOOKEEPER LOCAL DATA ────────────────────────────────
+kafka-logs/
+zookeeper-data/
+
+# ─── POSTGRES LOCAL DATA ─────────────────────────────────────────
+postgres-data/
+
+# ─── COMMON-LIB LOCAL BUILD ──────────────────────────────────────
+shared/common-lib/target/
