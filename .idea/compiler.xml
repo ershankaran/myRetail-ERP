@@ -7,7 +7,6 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="pos-service" />
-        <module name="inventory-service" />
         <module name="finance-service" />
         <module name="api-gateway" />
         <module name="analytics-service" />
@@ -24,6 +23,8 @@
           <entry name="$MAVEN_REPOSITORY$/org/projectlombok/lombok/1.18.30/lombok-1.18.30.jar" />
         </processorPath>
         <module name="iam-service" />
+        <module name="inventory-service" />
+        <module name="common-lib" />
       </profile>
     </annotationProcessing>
   </component>
@@ -31,6 +32,7 @@
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="analytics-service" options="-parameters" />
       <module name="api-gateway" options="-parameters" />
+      <module name="common-lib" options="-parameters" />
       <module name="finance-service" options="-parameters" />
       <module name="hr-service" options="-parameters" />
       <module name="iam-service" options="-parameters" />

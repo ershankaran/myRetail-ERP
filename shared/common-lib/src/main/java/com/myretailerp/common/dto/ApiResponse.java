@@ -1,4 +1,4 @@
-package com.myretailerp.iam.dto;
+package com.myretailerp.common.dto;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
 import java.time.LocalDateTime;

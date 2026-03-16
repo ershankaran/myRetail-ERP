@@ -1,6 +1,6 @@
 package com.myretailerp.iam.Controller;
 
-import com.myretailerp.iam.dto.ApiResponse;
+import com.myretailerp.common.dto.ApiResponse;
 import com.myretailerp.iam.dto.AuthResponse;
 import com.myretailerp.iam.dto.LoginRequest;
 import com.myretailerp.iam.dto.RegisterRequest;

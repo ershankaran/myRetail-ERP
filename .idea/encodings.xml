@@ -11,5 +11,6 @@
     <file url="file://$PROJECT_DIR$/services/order-service/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/services/pos-service/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/services/procurement-service/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/shared/common-lib/src/main/java" charset="UTF-8" />
   </component>
 </project>

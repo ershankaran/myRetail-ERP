@@ -1,5 +1,6 @@
 package com.myretailerp.iam.service;
 
+import com.myretailerp.common.security.JwtService;
 import com.myretailerp.iam.dto.AuthResponse;
 import com.myretailerp.iam.dto.LoginRequest;
 import com.myretailerp.iam.dto.RegisterRequest;
@@ -7,7 +8,6 @@ import com.myretailerp.iam.entity.User;
 import com.myretailerp.iam.Exception.EmailAlreadyExistsException;
 import com.myretailerp.iam.Exception.UserNotFoundException;
 import com.myretailerp.iam.repo.UserRepository;
-import com.myretailerp.iam.Security.JwtService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;

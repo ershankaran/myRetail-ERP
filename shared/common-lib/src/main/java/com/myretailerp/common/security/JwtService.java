@@ -1,4 +1,4 @@
-package com.myretailerp.iam.Security;
+package com.myretailerp.common.security;
 
 import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.Jwts;
@@ -49,7 +49,7 @@ public class JwtService {
         return parseClaims(token).getExpiration().before(new Date());
     }
 
-    private Claims parseClaims(String token) {
+    public Claims parseClaims(String token) {
         return Jwts.parser()
                 .verifyWith(getSigningKey())
                 .build()
