@@ -1,0 +1,8 @@
+package com.myretailerp.pos.exception;
+
+
+public class ItemNotFoundException extends RuntimeException {
+    public ItemNotFoundException(String sku) {
+        super("Item not found in cart: " + sku);
+    }
+}
