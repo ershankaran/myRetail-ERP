@@ -44,12 +44,21 @@ public class StockLevel {
     @Column(nullable = false)
     private Integer quantity;
 
+    @Column(nullable = false)
+    @Builder.Default
+    private Integer reservedQuantity = 0;
+
     @Version
     @Column(nullable = false)
     private Long version;
 
     @Column(nullable = false)
     private LocalDateTime lastUpdated;
+
+    // Computed — never stored in DB
+    public Integer getAvailableQuantity() {
+        return quantity - reservedQuantity;
+    }
 
     @PrePersist
     @PreUpdate

@@ -4,6 +4,7 @@ import com.myretailerp.inventory.entity.Product;
 import com.myretailerp.inventory.entity.StockLevel;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
+import org.springframework.data.repository.query.Param;
 
 import java.util.List;
 import java.util.Optional;
@@ -28,4 +29,8 @@ public interface StockLevelRepository
         AND s.product.active = true
     """)
     List<StockLevel> findAllDepleted();
+
+    @Query(value = "SELECT reserved_quantity FROM stock_levels WHERE product_id = :productId",
+            nativeQuery = true)
+    Integer findReservedQuantityByProductId(@Param("productId") UUID productId);
 }

@@ -1,0 +1,7 @@
+package com.myretailerp.inventory.kafka.event;
+
+import java.util.UUID;
+
+public record OrderConfirmedEvent(
+        UUID orderId
+) {}

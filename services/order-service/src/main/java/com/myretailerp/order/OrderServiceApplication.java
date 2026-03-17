@@ -1,4 +1,4 @@
-package com.myretailerp.inventory;
+package com.myretailerp.order;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.datatype.jsr310.JavaTimeModule;
@@ -11,19 +11,19 @@ import org.springframework.kafka.annotation.EnableKafka;
 @SpringBootApplication
 @EnableKafka
 @ComponentScan(basePackages = {
-		"com.myretailerp.inventory",
+		"com.myretailerp.order",
 		"com.myretailerp.common"
 })
-public class InventoryServiceApplication {
+public class OrderServiceApplication  {
 
 	public static void main(String[] args) {
-		SpringApplication.run(InventoryServiceApplication.class, args);
+		SpringApplication.run(OrderServiceApplication .class, args);
 	}
-
 	@Bean
 	public ObjectMapper objectMapper() {
 		ObjectMapper mapper = new ObjectMapper();
 		mapper.registerModule(new JavaTimeModule());
 		return mapper;
 	}
+
 }
