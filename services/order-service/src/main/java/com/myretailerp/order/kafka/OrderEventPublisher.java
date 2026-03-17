@@ -2,6 +2,7 @@ package com.myretailerp.order.kafka;
 
 import com.myretailerp.order.entity.Order;
 import com.myretailerp.order.kafka.event.OrderCreatedEvent;
+import com.myretailerp.order.kafka.event.OrderFinanceEvent;
 import com.myretailerp.order.kafka.event.OrderItemEvent;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
@@ -25,6 +26,7 @@ public class OrderEventPublisher {
     private static final String ORDER_CANCELLED = "order.cancelled";
     private static final String ORDER_SHIPPED   = "order.shipped";
     private static final String ORDER_DELIVERED = "order.delivered";
+    private static final String ORDER_FINANCE = "order.finance.confirmed";
 
     public void publishOrderCreated(Order order) {
         OrderCreatedEvent event = new OrderCreatedEvent(
@@ -96,5 +98,25 @@ public class OrderEventPublisher {
         } catch (Exception e) {
             log.error("Failed to serialize event: {}", e.getMessage());
         }
+    }
+
+    public void publishOrderFinanceEvent(Order order) {
+        OrderFinanceEvent event = new OrderFinanceEvent(
+                "ORDER_FINANCE_CONFIRMED",
+                order.getId(),
+                order.getCustomerId(),
+                order.getTotalAmount(),
+                order.getItems().stream()
+                        .map(item -> new OrderItemEvent(
+                                item.getProductId(),
+                                item.getSku(),
+                                item.getProductName(),
+                                item.getQuantity(),
+                                item.getUnitPrice()))
+                        .toList(),
+                order.getConfirmedAt(),
+                LocalDateTime.now()
+        );
+        send(ORDER_FINANCE, order.getId().toString(), event);
     }
 }

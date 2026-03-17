@@ -98,6 +98,8 @@ public class OrderService {
         // Emit order.confirmed → triggers inventory.confirmReservation
         eventPublisher.publishOrderConfirmed(order);
 
+        eventPublisher.publishOrderFinanceEvent(order);
+
         log.info("Order confirmed: {}", orderId);
     }
 
