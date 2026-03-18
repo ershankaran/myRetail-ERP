@@ -7,14 +7,13 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="finance-service" />
         <module name="api-gateway" />
         <module name="analytics-service" />
         <module name="hr-service" />
         <module name="procurement-service" />
         <module name="notification-service" />
       </profile>
-      <profile name="Annotation profile for pos-service" enabled="true">
+      <profile name="Annotation profile for finance-service" enabled="true">
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
@@ -26,6 +25,7 @@
         <module name="order-service" />
         <module name="inventory-service" />
         <module name="common-lib" />
+        <module name="finance-service" />
       </profile>
     </annotationProcessing>
   </component>

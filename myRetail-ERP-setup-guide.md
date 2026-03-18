@@ -392,3 +392,18 @@ Build the authentication foundation that every other service depends on:
 - Spring Security filter chain
 - RBAC — role-based endpoint protection
 - `POST /auth/register` and `POST /auth/login` endpoints
+
+
+# Misc
+## Connect to any other service database
+ - winpty docker exec -it postgres psql -U erpadmin -d inventory_db
+ - winpty docker exec -it postgres psql -U erpadmin -d order_db
+ - winpty docker exec -it postgres psql -U erpadmin -d pos_db
+ - winpty docker exec -it postgres psql -U erpadmin -d finance_db
+
+## Run a single query without entering interactive mode
+winpty docker exec -it postgres psql -U erpadmin -d finance_db \
+-c "SELECT account_code, account_name, current_balance FROM ledger_accounts ORDER BY account_code;"
+
+## List all databases
+winpty docker exec -it postgres psql -U erpadmin -d postgres -c "\l"
