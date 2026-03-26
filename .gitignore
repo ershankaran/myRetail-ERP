@@ -54,15 +54,17 @@ bin/
 *.code-workspace
 
 # ─── NODE / ANGULAR ──────────────────────────────────────────────
-frontend/**/node_modules/
-frontend/**/.angular/
-frontend/**/dist/
-frontend/**/.cache/
-frontend/**/*.js.map
-frontend/**/npm-debug.log*
-frontend/**/yarn-error.log*
-frontend/**/.env.local
-frontend/**/.env.*.local
+erpUI/**/node_modules/
+erpUI/**/.angular/
+erpUI/**/dist/
+erpUI/**/.cache/
+erpUI/**/*.js.map
+erpUI/**/npm-debug.log*
+erpUI/**/yarn-error.log*
+erpUI/**/.env.local
+erpUI/**/.env.*.local
+
+node_modules/
 
 # ─── DOCKER ──────────────────────────────────────────────────────
 docker-compose.override.yml
