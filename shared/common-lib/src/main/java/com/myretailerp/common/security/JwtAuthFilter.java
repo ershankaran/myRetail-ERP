@@ -71,6 +71,8 @@ public class JwtAuthFilter extends OncePerRequestFilter {
                                 .buildDetails(request));
                 SecurityContextHolder.getContext()
                         .setAuthentication(authToken);
+
+                System.out.println("Setting authority: " + authorities);
             }
         }
         filterChain.doFilter(request, response);
