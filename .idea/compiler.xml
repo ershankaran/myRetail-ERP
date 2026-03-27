@@ -13,15 +13,15 @@
         <module name="procurement-service" />
         <module name="notification-service" />
       </profile>
-      <profile name="Annotation profile for finance-service" enabled="true">
+      <profile name="Annotation profile for iam-service" enabled="true">
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <processorPath useClasspath="false">
           <entry name="$MAVEN_REPOSITORY$/org/projectlombok/lombok/1.18.30/lombok-1.18.30.jar" />
         </processorPath>
-        <module name="pos-service" />
         <module name="iam-service" />
+        <module name="pos-service" />
         <module name="order-service" />
         <module name="inventory-service" />
         <module name="common-lib" />
